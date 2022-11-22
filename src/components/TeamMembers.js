@@ -35,7 +35,7 @@ export default function TeamMembers() {
           {teamData.map((data) => {
             return (
               <div className="text-center w-1/3">
-                <img className="h-80 w-1/2 mb-20 m-auto" src={data.img} alt="" />
+                <img className="h-80 w-3/4 mb-20 m-auto" src={data.img} alt="" />
                 <h3 className="text-3xl mb-5">{data.name}</h3>
                 <p className="mb-5 w-3/4 m-auto">{data.info}</p>
                 <p className="mb-20">Year {data.years}</p>
