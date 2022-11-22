@@ -3,8 +3,8 @@
   "/_error": "pages/_error.js",
   "/api/hello": "pages/api/hello.js",
   "/": "pages/index.html",
-  "/projects": "pages/projects.html",
   "/portfolio": "pages/portfolio.html",
+  "/projects": "pages/projects.html",
   "/teamMembers": "pages/teamMembers.html",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"

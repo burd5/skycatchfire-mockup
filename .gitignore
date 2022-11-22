@@ -5,7 +5,10 @@ config.js
 /node_modules
 /.pnp
 .pnp.js
-
+.firebaserc
+firebase.json
+/.firebase
+./src/backend/config.js
 # testing
 /coverage
 
