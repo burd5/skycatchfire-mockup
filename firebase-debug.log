@@ -1,0 +1,256 @@
+[debug] [2022-11-22T20:11:33.430Z] ----------------------------------------------------------------------
+[debug] [2022-11-22T20:11:33.432Z] Command:       /Users/austinburdette/.nvm/versions/node/v16.18.1/bin/node /Users/austinburdette/.npm-global/bin/firebase deploy
+[debug] [2022-11-22T20:11:33.433Z] CLI Version:   11.16.1
+[debug] [2022-11-22T20:11:33.433Z] Platform:      darwin
+[debug] [2022-11-22T20:11:33.433Z] Node Version:  v16.18.1
+[debug] [2022-11-22T20:11:33.435Z] Time:          Tue Nov 22 2022 13:11:33 GMT-0700 (Mountain Standard Time)
+[debug] [2022-11-22T20:11:33.435Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-22T20:11:33.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-22T20:11:33.507Z] > authorizing via signed-in user (austinburdette5@gmail.com)
+[debug] [2022-11-22T20:11:33.507Z] [iam] checking project skycatchfire-e73c6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-22T20:11:33.509Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions [none]
+[debug] [2022-11-22T20:11:33.510Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:11:33.510Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T20:11:33.659Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions 200
+[debug] [2022-11-22T20:11:33.659Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T20:11:33.660Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 [none]
+[debug] [2022-11-22T20:11:33.897Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 200
+[debug] [2022-11-22T20:11:33.897Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 {"projectId":"skycatchfire-e73c6","projectNumber":"971477979102","displayName":"skycatchfire","name":"projects/skycatchfire-e73c6","resources":{"hostingSite":"skycatchfire-e73c6"},"state":"ACTIVE","etag":"1_819133a8-e2c2-4d2f-bebd-0f3fb66d3925"}
+[debug] [2022-11-22T20:11:36.410Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites pageToken=&pageSize=10
+[debug] [2022-11-22T20:11:36.931Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites 200
+[debug] [2022-11-22T20:11:36.932Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites {"sites":[{"name":"projects/skycatchfire-e73c6/sites/skycatchfire-e73c6","defaultUrl":"https://skycatchfire-e73c6.web.app","appId":"1:971477979102:web:998f3521192f4e1cf7574f","type":"DEFAULT_SITE"}]}
+[debug] [2022-11-22T20:11:36.932Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config [none]
+[debug] [2022-11-22T20:11:37.438Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config 200
+[debug] [2022-11-22T20:11:37.438Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config {"projectId":"skycatchfire-e73c6","appId":"1:971477979102:web:998f3521192f4e1cf7574f","storageBucket":"skycatchfire-e73c6.appspot.com","apiKey":"AIzaSyA-UGJdODDcXAELT4jl0xcZF9c7g9E6ok0","authDomain":"skycatchfire-e73c6.firebaseapp.com","messagingSenderId":"971477979102","measurementId":"G-52FGQN46YF"}
+[info] 
+[info] === Deploying to 'skycatchfire-e73c6'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-11-22T20:12:09.049Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 [none]
+[debug] [2022-11-22T20:12:09.300Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 200
+[debug] [2022-11-22T20:12:09.300Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 {"projectId":"skycatchfire-e73c6","projectNumber":"971477979102","displayName":"skycatchfire","name":"projects/skycatchfire-e73c6","resources":{"hostingSite":"skycatchfire-e73c6"},"state":"ACTIVE","etag":"1_819133a8-e2c2-4d2f-bebd-0f3fb66d3925"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-11-22T20:12:09.306Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-11-22T20:12:09.306Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:12:09.307Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-11-22T20:12:09.307Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:12:09.308Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com [none]
+[debug] [2022-11-22T20:12:09.308Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:12:09.309Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com [none]
+[debug] [2022-11-22T20:12:09.309Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:12:09.660Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com 200
+[debug] [2022-11-22T20:12:09.660Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-11-22T20:12:09.669Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com 200
+[debug] [2022-11-22T20:12:09.669Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-11-22T20:12:09.673Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com 200
+[debug] [2022-11-22T20:12:09.674Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-11-22T20:12:09.676Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com 200
+[debug] [2022-11-22T20:12:09.676Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-11-22T20:12:09.676Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig [none]
+[debug] [2022-11-22T20:12:09.940Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig 200
+[debug] [2022-11-22T20:12:09.940Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig {"projectId":"skycatchfire-e73c6","storageBucket":"skycatchfire-e73c6.appspot.com"}
+[debug] [2022-11-22T20:12:09.941Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs [none]
+[debug] [2022-11-22T20:12:10.472Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs 200
+[debug] [2022-11-22T20:12:10.473Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs {}
+[info] i  functions: preparing codebase firebase-frameworks-skycatchfire-e73c6 for deployment 
+[debug] [2022-11-22T20:12:10.476Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-22T20:12:12.046Z] > [functions] package.json contents: {
+  "name": "skycatchfire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch\"",
+    "build": "tailwindcss ./styles/globals.css --output ./styles/output.css && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^13.0.4",
+    "firebase": "^9.14.0",
+    "firebase-tools": "^11.16.1",
+    "next": "13.0.4",
+    "nvm": "^0.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2022-11-22T20:12:12.046Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-11-22T20:12:12.052Z] Found functions.yaml. Got spec: {
+  "endpoints": {
+    "ssrskycatchfiree73c6": {
+      "platform": "gcfv2",
+      "region": [
+        "us-central1"
+      ],
+      "labels": {},
+      "httpsTrigger": {},
+      "entryPoint": "ssr"
+    }
+  },
+  "specVersion": "v1alpha1",
+  "requiredAPIs": []
+}
+[info] i  functions: preparing .firebase/skycatchfire-e73c6/functions directory for uploading... 
+[info] i  functions: packaged /Users/austinburdette/Documents/Projects/skycatchfire/.firebase/skycatchfire-e73c6/functions (44.5 MB) for uploading 
+[debug] [2022-11-22T20:12:15.070Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions [none]
+[debug] [2022-11-22T20:12:15.602Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions 200
+[debug] [2022-11-22T20:12:15.602Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions {}
+[debug] [2022-11-22T20:12:15.603Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2022-11-22T20:12:16.138Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions 200
+[debug] [2022-11-22T20:12:16.138Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions {"functions":[{"name":"projects/skycatchfire-e73c6/locations/us-central1/functions/ssrskycatchfiree73c6","buildConfig":{"build":"projects/971477979102/locations/us-central1/builds/29ede2d3-17a6-475b-b524-3877f21b96e9","runtime":"nodejs16","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-sources-971477979102-us-central1","object":"ssrskycatchfiree73c6/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-971477979102-us-central1","object":"ssrskycatchfiree73c6/function-source.zip","generation":"1669146376793549"}}},"state":"FAILED","updateTime":"2022-11-22T19:47:18.652324608Z","labels":{"firebase-functions-codebase":"firebase-frameworks-skycatchfire-e73c6","firebase-functions-hash":"d3bd531603f8d6075e15d0e766860f535b0996e7","deployment-tool":"cli-firebase"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/skycatchfire-e73c6/locations/us-central1/services/ssrskycatchfiree73c6 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2"}]}
+[debug] [2022-11-22T20:12:16.235Z] TypeError: Cannot read properties of undefined (reading 'service')
+    at /Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:198:113
+    at Array.map (<anonymous>)
+    at loadExistingBackend (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:198:69)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.existingBackend (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:174:9)
+    at async prepare (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/prepare.js:151:115)
+    at async chain (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/index.js:35:9)
+    at async deploy (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/index.js:79:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-11-22T20:16:27.482Z] ----------------------------------------------------------------------
+[debug] [2022-11-22T20:16:27.483Z] Command:       /Users/austinburdette/.nvm/versions/node/v16.18.1/bin/node /Users/austinburdette/.npm-global/bin/firebase deploy
+[debug] [2022-11-22T20:16:27.484Z] CLI Version:   11.16.1
+[debug] [2022-11-22T20:16:27.484Z] Platform:      darwin
+[debug] [2022-11-22T20:16:27.484Z] Node Version:  v16.18.1
+[debug] [2022-11-22T20:16:27.496Z] Time:          Tue Nov 22 2022 13:16:27 GMT-0700 (Mountain Standard Time)
+[debug] [2022-11-22T20:16:27.496Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-22T20:16:27.562Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-22T20:16:27.562Z] > authorizing via signed-in user (austinburdette5@gmail.com)
+[debug] [2022-11-22T20:16:27.562Z] [iam] checking project skycatchfire-e73c6 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-22T20:16:27.564Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions [none]
+[debug] [2022-11-22T20:16:27.564Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:16:27.565Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T20:16:27.851Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions 200
+[debug] [2022-11-22T20:16:27.851Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/skycatchfire-e73c6:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T20:16:27.852Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 [none]
+[debug] [2022-11-22T20:16:28.184Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 200
+[debug] [2022-11-22T20:16:28.185Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 {"projectId":"skycatchfire-e73c6","projectNumber":"971477979102","displayName":"skycatchfire","name":"projects/skycatchfire-e73c6","resources":{"hostingSite":"skycatchfire-e73c6"},"state":"ACTIVE","etag":"1_42bde6a0-9a85-40b0-b41e-e1f8266ac4bf"}
+[debug] [2022-11-22T20:16:30.447Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites pageToken=&pageSize=10
+[debug] [2022-11-22T20:16:31.004Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites 200
+[debug] [2022-11-22T20:16:31.005Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/skycatchfire-e73c6/sites {"sites":[{"name":"projects/skycatchfire-e73c6/sites/skycatchfire-e73c6","defaultUrl":"https://skycatchfire-e73c6.web.app","appId":"1:971477979102:web:998f3521192f4e1cf7574f","type":"DEFAULT_SITE"}]}
+[debug] [2022-11-22T20:16:31.006Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config [none]
+[debug] [2022-11-22T20:16:31.487Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config 200
+[debug] [2022-11-22T20:16:31.487Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:971477979102:web:998f3521192f4e1cf7574f/config {"projectId":"skycatchfire-e73c6","appId":"1:971477979102:web:998f3521192f4e1cf7574f","storageBucket":"skycatchfire-e73c6.appspot.com","apiKey":"AIzaSyA-UGJdODDcXAELT4jl0xcZF9c7g9E6ok0","authDomain":"skycatchfire-e73c6.firebaseapp.com","messagingSenderId":"971477979102","measurementId":"G-52FGQN46YF"}
+[info] 
+[info] === Deploying to 'skycatchfire-e73c6'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-11-22T20:16:55.707Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 [none]
+[debug] [2022-11-22T20:16:55.974Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 200
+[debug] [2022-11-22T20:16:55.974Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6 {"projectId":"skycatchfire-e73c6","projectNumber":"971477979102","displayName":"skycatchfire","name":"projects/skycatchfire-e73c6","resources":{"hostingSite":"skycatchfire-e73c6"},"state":"ACTIVE","etag":"1_42bde6a0-9a85-40b0-b41e-e1f8266ac4bf"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-11-22T20:16:55.977Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-11-22T20:16:55.977Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:16:55.979Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-11-22T20:16:55.979Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:16:55.980Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com [none]
+[debug] [2022-11-22T20:16:55.981Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:16:55.982Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com [none]
+[debug] [2022-11-22T20:16:55.982Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com x-goog-quota-user=projects/skycatchfire-e73c6
+[debug] [2022-11-22T20:16:56.492Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com 200
+[debug] [2022-11-22T20:16:56.492Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-11-22T20:16:56.698Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com 200
+[debug] [2022-11-22T20:16:56.699Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-11-22T20:16:56.726Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com 200
+[debug] [2022-11-22T20:16:56.727Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-11-22T20:16:56.729Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com 200
+[debug] [2022-11-22T20:16:56.729Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/skycatchfire-e73c6/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-11-22T20:16:56.733Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig [none]
+[debug] [2022-11-22T20:16:57.010Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig 200
+[debug] [2022-11-22T20:16:57.011Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/skycatchfire-e73c6/adminSdkConfig {"projectId":"skycatchfire-e73c6","storageBucket":"skycatchfire-e73c6.appspot.com"}
+[debug] [2022-11-22T20:16:57.016Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs [none]
+[debug] [2022-11-22T20:16:57.298Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs 200
+[debug] [2022-11-22T20:16:57.298Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/skycatchfire-e73c6/configs {}
+[info] i  functions: preparing codebase firebase-frameworks-skycatchfire-e73c6 for deployment 
+[debug] [2022-11-22T20:16:57.344Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-22T20:16:59.087Z] > [functions] package.json contents: {
+  "name": "skycatchfire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch\"",
+    "build": "tailwindcss ./styles/globals.css --output ./styles/output.css && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^13.0.4",
+    "firebase": "^9.14.0",
+    "firebase-tools": "^11.16.1",
+    "next": "13.0.4",
+    "nvm": "^0.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2022-11-22T20:16:59.088Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-11-22T20:16:59.099Z] Found functions.yaml. Got spec: {
+  "endpoints": {
+    "ssrskycatchfiree73c6": {
+      "platform": "gcfv2",
+      "region": [
+        "us-central1"
+      ],
+      "labels": {},
+      "httpsTrigger": {},
+      "entryPoint": "ssr"
+    }
+  },
+  "specVersion": "v1alpha1",
+  "requiredAPIs": []
+}
+[info] i  functions: preparing .firebase/skycatchfire-e73c6/functions directory for uploading... 
+[info] i  functions: packaged /Users/austinburdette/Documents/Projects/skycatchfire/.firebase/skycatchfire-e73c6/functions (44.5 MB) for uploading 
+[debug] [2022-11-22T20:17:02.450Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions [none]
+[debug] [2022-11-22T20:17:03.131Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions 200
+[debug] [2022-11-22T20:17:03.131Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/skycatchfire-e73c6/locations/-/functions {}
+[debug] [2022-11-22T20:17:03.132Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2022-11-22T20:17:03.744Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions 200
+[debug] [2022-11-22T20:17:03.744Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/skycatchfire-e73c6/locations/-/functions {"functions":[{"name":"projects/skycatchfire-e73c6/locations/us-central1/functions/ssrskycatchfiree73c6","buildConfig":{"build":"projects/971477979102/locations/us-central1/builds/29ede2d3-17a6-475b-b524-3877f21b96e9","runtime":"nodejs16","entryPoint":"ssr","source":{"storageSource":{"bucket":"gcf-v2-sources-971477979102-us-central1","object":"ssrskycatchfiree73c6/function-source.zip"}},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-971477979102-us-central1","object":"ssrskycatchfiree73c6/function-source.zip","generation":"1669146376793549"}}},"state":"FAILED","updateTime":"2022-11-22T19:47:18.652324608Z","labels":{"firebase-functions-hash":"d3bd531603f8d6075e15d0e766860f535b0996e7","deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-skycatchfire-e73c6"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/skycatchfire-e73c6/locations/us-central1/services/ssrskycatchfiree73c6 for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2"}]}
+[debug] [2022-11-22T20:17:03.837Z] TypeError: Cannot read properties of undefined (reading 'service')
+    at /Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:198:113
+    at Array.map (<anonymous>)
+    at loadExistingBackend (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:198:69)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.existingBackend (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:174:9)
+    at async prepare (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/functions/prepare.js:151:115)
+    at async chain (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/index.js:35:9)
+    at async deploy (/Users/austinburdette/.npm-global/lib/node_modules/firebase-tools/lib/deploy/index.js:79:5)
+[error] 
+[error] Error: An unexpected error has occurred.

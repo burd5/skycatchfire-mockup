@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch\"",
-    "build": "tailwindcss ./styles/globals.css --output ./styles/output.css && next build",   
+    "build": "tailwindcss ./styles/globals.css --output ./styles/output.css && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,6 +13,7 @@
     "firebase": "^9.14.0",
     "firebase-tools": "^11.16.1",
     "next": "13.0.4",
+    "nvm": "^0.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

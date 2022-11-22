@@ -1,0 +1,27 @@
+{
+  "name": "skycatchfire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"tailwindcss --input ./styles/globals.css --output ./styles/output.css --watch\"",
+    "build": "tailwindcss ./styles/globals.css --output ./styles/output.css && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "^13.0.4",
+    "firebase": "^9.14.0",
+    "firebase-tools": "^11.16.1",
+    "next": "13.0.4",
+    "nvm": "^0.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
